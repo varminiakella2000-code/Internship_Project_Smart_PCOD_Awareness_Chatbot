@@ -1,0 +1,120 @@
+/* Center the entire chat container with gradient background */
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  background: linear-gradient(
+    135deg,
+    #4a76a8,
+    #6fb1fc
+  ); /* gradient from blue to lighter blue */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-container {
+  width: 360px; /* 450px reduced by ~20% */
+  height: 480px; /* 600px reduced by ~20% */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+}
+
+/* Chat header */
+.chat-header {
+  background: #4a76a8;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* make the window slightly translucent so the background image shows through */
+  background-color: rgba(229, 233, 240, 0.75);
+}
+
+/* Chat messages */
+.chat-message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background-color: #4a76a8;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #333;
+  border-bottom-left-radius: 0;
+}
+
+.message-text {
+  margin-bottom: 4px;
+}
+
+.message-time {
+  font-size: 10px;
+  color: #888;
+  text-align: right;
+}
+
+/* Chat input */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.chat-input button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #4a76a8;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-input button:hover {
+  background-color: #3b5f86;
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: #666;
+  padding: 6px 10px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  background-color: #fdfdfd;
+  text-align: center;
+}
